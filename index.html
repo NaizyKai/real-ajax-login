@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="name"></div>
+	<button id="logout">logout</button>
+	<script>
+		$(document).ready(function() {
+			$.ajaxSetup({cache: false});
+		    $.post("php/session.php", function(data) {
+		        if(!data.uid) {
+		        	window.location = 'login.html';
+		        } else {
+		        	console.log(data);
+		        }
+			}).done(function(data) {
+				$('#name').html(data.displayname);
+			});
+
+			$('#logout').click(function() {
+				$.post('php/logout.php', function() {
+					window.location = 'login.html';
+				});
+			});
+		});
+	</script>
+
+</body>
+</html>

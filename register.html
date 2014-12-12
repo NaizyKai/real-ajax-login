@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Real Ajax Login</h1>
+		<form id="regform" class="dataentry" method="post" action="">
+			<label>Username</label> 
+			<input id="username" type="text" name="username">
+			<label>Password</label>
+			<input id="password" type="password" name="password">
+			<label>Password Confirmation</label>
+			<input id="passconfirm" type="password" name="passconfirm">
+			<label>Display Name</label> 
+			<input id="displayname" type="text" name="displayname">
+			<label>email</label> 
+			<input id="email" type="text" name="email">
+			<input id="regsubmit" class="btn btn-primary" type="submit" value="Register" disabled>
+			<div id="error"></div>
+		</form>
+	</div>
+	<footer>
+		Back to <a href="login.html">Login</a> page.
+	</footer>
+	<script src="js/register.js"></script>
+</body>
+</html>
